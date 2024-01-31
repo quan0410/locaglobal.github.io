@@ -5,8 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/tailwind/output.css">
+    <link rel="stylesheet" href="app/assets/css/app.css">
+    <link rel="stylesheet" href="app/assets/css/tailwind/output.css">
     <title>LoCaMos Global</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../node_modules/preline/dist/preline.js"></script>
@@ -15,7 +15,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             let injectHtml = (nameFile, nameEle) => {
                 $.ajax({
-                    url: './' + nameFile,
+                    url: './app/' + nameFile,
                     type: "GET",
                     dataType: "html",
                     success: (res) => {
