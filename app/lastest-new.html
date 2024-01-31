@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="assets/css/app.css"/>
+    <link rel="stylesheet" href="assets/css/tailwind/output.css"/>
+    <title>LoCaMos Global</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../node_modules/preline/dist/preline.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let injectHtml = (nameFile, nameEle) => {
+                $.ajax({
+                    url: "./" + nameFile,
+                    type: "GET",
+                    dataType: "html",
+                    success: (res) => {
+                        console.log(res);
+                        $(nameEle).html(res);
+                    },
+                });
+            };
+
+            injectHtml("component/header.html", "#header");
+            injectHtml("component/footer.html", "#footer");
+        });
+    </script>
+</head>
+
+<body>
+<header id="header"></header>
+<div id="wrapper-content" class="overflow-hidden lastest-new lg:pt-20 pb-36">
+    <section class="w-full overflow-hidden flex flex-col gap-16 px-4 lg:px-20 pt-36 lg:pt-20 relative">
+        <div class="absolute -left-1/4 xl:left-0 -top-[25rem] -z-[1]">
+            <img class="bg-center w-[1440px]" src="../public/image/home/aboutSection/Ellipse%201.svg" alt="">
+        </div>
+        <div class="flex flex-col gap-6 items-start md:items-center">
+            <p class="title-xl">Our Lastest News</p>
+        </div>
+        <div class="bg-gradient-to-t lg:bg-gradient-to-l from-[#ffffffab] to-transparent p-[2px] rounded-3xl overflow-hidden">
+            <div class="flex flex-col lg:flex-row bg-[#00147F] lg:rounded-bl-none lg:rounded-r-3xl rounded-b-3xl">
+                <div class="bg-image lg:w-1/2 xl:w-full">
+                    <img src="../public/image/lastest-new/Rectangle.png" alt="">
+                </div>
+                <div class="p-5 xl:p-4 bg-post lg:rounded-r-3xl rounded-b-3xl lg:rounded-bl-none lg:w-1/2">
+                    <div class="flex xl:flex-row flex-col gap-1 xl:gap-0 justify-between mb-3 text-[#00BFFF] pr-10">
+                        <div class="flex gap-1">
+                            <img src="../public/image/home/postsSection/icons.svg" alt="">
+                            <span>November 24, 2023</span>
+                        </div>
+                        <div class="flex gap-1">
+                            <img src="../public/image/home/postsSection/tag.svg" alt="">
+                            <span>Business</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col xl:gap-[18px] gap-0">
+                        <a href="#" class="text-3xl text-white font-bold leading-9">Keep Your Business Safe Ensure High
+                            Availability.
+                        </a>
+                        <div class="content-sm line-clamp-3">
+                            Lorem ipsum dolor sit amet consectetur. Enim volutpat quis egestas amet. Non vestibulum
+                            massa
+                            blandit diam non at ac.
+                        </div>
+                    </div>
+                    <div class="mb-4 lg:mb-0 mt-16">
+                        <a href="#" class="rounded border border-white p-4 text-lg font-bold text-white">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-6 xl:gap-8 post">
+            <div class="bg-gradient p-[2px] rounded-b-2xl overflow-hidden rounded-2xl">
+                <div class="flex flex-col rounded-b-2xl overflow-hidden max-w-[405px] bg-[#00147F]">
+                    <div>
+                        <img src="../public/image/home/postsSection/Rectangle-23815.png" alt="">
+                    </div>
+                    <div class="p-5 xl:p-4 rounded-b-2xl bg-post">
+                        <div class="flex xl:flex-row flex-col gap-1 xl:gap-0 justify-between mb-3 text-[#00BFFF]">
+                            <div class="flex gap-1">
+                                <img src="../public/image/home/postsSection/icons.svg" alt="">
+                                <span>November 24, 2023</span>
+                            </div>
+                            <div class="flex gap-1">
+                                <img src="../public/image/home/postsSection/tag.svg" alt="">
+                                <span>Business</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col xl:gap-[18px] gap-0">
+                            <a href="#" class="title-lg">Keep Your Business Safe Ensure High Availability.
+                            </a>
+                            <div class="content-sm">
+                                Lorem ipsum dolor sit amet consectetur. Enim volutpat quis egestas amet. Non vestibulum
+                                massa
+                                blandit diam non at ac.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gradient p-[2px] rounded-b-2xl overflow-hidden rounded-2xl">
+                <div class="flex flex-col rounded-b-2xl overflow-hidden max-w-[405px] bg-[#00147F]">
+                    <div>
+                        <img src="../public/image/home/postsSection/Rectangle2.png" alt="">
+                    </div>
+                    <div class="p-5 xl:p-4 rounded-b-2xl"
+                         style="background: #ffffff1f;">
+                        <div class="flex xl:flex-row flex-col gap-1 xl:gap-0 justify-between mb-3 text-[#00BFFF]">
+                            <div class="flex gap-1">
+                                <img src="../public/image/home/postsSection/icons.svg" alt="">
+                                <span>November 24, 2023</span>
+                            </div>
+                            <div class="flex gap-1">
+                                <img src="../public/image/home/postsSection/tag.svg" alt="">
+                                <span>Business</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col xl:gap-[18px] gap-0">
+                            <a href="#" class="title-lg">Keep Your Business Safe Ensure High Availability.
+                            </a>
+                            <div class="content-sm">
+                                Lorem ipsum dolor sit amet consectetur. Enim volutpat quis egestas amet. Non vestibulum
+                                massa
+                                blandit diam non at ac.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gradient p-[2px] rounded-b-2xl overflow-hidden rounded-2xl">
+                <div class="flex flex-col rounded-b-2xl overflow-hidden max-w-[405px] bg-[#00147F]">
+                    <div>
+                        <img src="../public/image/home/postsSection/Rectangle3.png" alt="">
+                    </div>
+                    <div class="p-5 xl:p-4 rounded-b-2xl"
+                         style="background: #ffffff1f;">
+                        <div class="flex xl:flex-row flex-col gap-1 xl:gap-0 justify-between mb-3 text-[#00BFFF]">
+                            <div class="flex gap-1">
+                                <img src="../public/image/home/postsSection/icons.svg" alt="">
+                                <span>November 24, 2023</span>
+                            </div>
+                            <div class="flex gap-1">
+                                <img src="../public/image/home/postsSection/tag.svg" alt="">
+                                <span>Business</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col xl:gap-[18px] gap-0">
+                            <a href="#" class="title-lg">Keep Your Business Safe Ensure High Availability.
+                            </a>
+                            <div class="content-sm">
+                                Lorem ipsum dolor sit amet consectetur. Enim volutpat quis egestas amet. Non vestibulum
+                                massa
+                                blandit diam non at ac.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-question mt-20 lg:mt-[120px] bg-white bg-opacity-25">
+        <div class="max-w-[725px] mx-4 md:mx-auto flex flex-col gap-6 justify-center py-20">
+            <p class="title-xl text-center font-semibold">Frequently asked questions</p>
+            <span class="text-white text-lg lg:text-2xl leading-5 text-center tracking-[-0.18px]">
+                We may or may not be from the future. Here are the questions you were just about to ask us.
+            </span>
+            <div class="question mt-5">
+                <div class="text-question">
+                    <p class="content_questions text-white text-2xl font-semibold leading-6 tracking-[-0.26px] flex justify-between py-8 border-t border-white border-opacity-20">
+                        What is a Whitelabel NFT Marketplace?
+                        <img class="icon_plus" src="../public/image/lastest-new/plus.svg" alt="">
+                        <img class="icon_dash" src="../public/image/lastest-new/dash.svg" alt="">
+                    </p>
+                    <div class="text-answer pb-8">
+                        <div class="answer pr-7">
+                            <span class="text-white text-base lg:text-lg xl:text-xl leading-5 tracking-[-0.05px]">
+                                LocaNFTs are digital representations of specific places securely stored on the Blockchain. These tokens create an immutable record of location ownership within the innovative LocaMos ecosystem.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-question">
+                    <p class="content_questions text-white text-2xl font-semibold leading-6 tracking-[-0.26px] flex justify-between py-8 border-t border-white border-opacity-20">
+                        What are LocaNFTs?
+                        <img class="icon_plus" src="../public/image/lastest-new/plus.svg" alt="">
+                        <img class="icon_dash" src="../public/image/lastest-new/dash.svg" alt="">
+                    </p>
+                    <div class="text-answer pb-8">
+                        <div class="answer pr-7">
+                            <span class="text-white text-base lg:text-lg xl:text-xl leading-5 tracking-[-0.05px]">
+                                LocaNFTs are digital representations of specific places securely stored on the Blockchain. These tokens create an immutable record of location ownership within the innovative LocaMos ecosystem.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-question">
+                    <p class="content_questions text-white text-2xl font-semibold leading-6 tracking-[-0.26px] flex justify-between py-8 border-t border-white border-opacity-20">
+                        What blockchain does your solution support?
+                        <img class="icon_plus" src="../public/image/lastest-new/plus.svg" alt="">
+                        <img class="icon_dash" src="../public/image/lastest-new/dash.svg" alt="">
+                    </p>
+                    <div class="text-answer pb-8">
+                        <div class="answer pr-7">
+                            <span class="text-white text-base lg:text-lg xl:text-xl leading-5 tracking-[-0.05px]">
+                                LocaNFTs are digital representations of specific places securely stored on the Blockchain. These tokens create an immutable record of location ownership within the innovative LocaMos ecosystem.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-question">
+                    <p class="content_questions text-white text-2xl font-semibold leading-6 tracking-[-0.26px] flex justify-between py-8 border-t border-white border-opacity-20">
+                        What blockchain does your solution support?
+                        <img class="icon_plus" src="../public/image/lastest-new/plus.svg" alt="">
+                        <img class="icon_dash" src="../public/image/lastest-new/dash.svg" alt="">
+                    </p>
+                    <div class="text-answer pb-8">
+                        <div class="answer pr-7">
+                            <span class="text-white text-base lg:text-lg xl:text-xl leading-5 tracking-[-0.05px]">
+                                LocaNFTs are digital representations of specific places securely stored on the Blockchain. These tokens create an immutable record of location ownership within the innovative LocaMos ecosystem.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-question">
+                    <p class="content_questions text-white text-2xl font-semibold leading-6 tracking-[-0.26px] flex justify-between py-8 border-t border-white border-opacity-20">
+                        How does your Whitelabel NFT Marketplace solution work?
+                        <img class="icon_plus" src="../public/image/lastest-new/plus.svg" alt="">
+                        <img class="icon_dash" src="../public/image/lastest-new/dash.svg" alt="">
+                    </p>
+                    <div class="text-answer pb-8">
+                        <div class="answer pr-7">
+                            <span class="text-white text-base lg:text-lg xl:text-xl leading-5 tracking-[-0.05px]">
+                                LocaNFTs are digital representations of specific places securely stored on the Blockchain. These tokens create an immutable record of location ownership within the innovative LocaMos ecosystem.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-question">
+                    <p class="content_questions text-white text-2xl font-semibold leading-6 tracking-[-0.26px] flex justify-between py-8 border-t border-white border-opacity-20">
+                        What features can I expect from your Whitelabel NFT Marketplace solution?
+                        <img class="icon_plus" src="../public/image/lastest-new/plus.svg" alt="">
+                        <img class="icon_dash" src="../public/image/lastest-new/dash.svg" alt="">
+                    </p>
+                    <div class="text-answer pb-8">
+                        <div class="answer pr-7">
+                            <span class="text-white text-base lg:text-lg xl:text-xl leading-5 tracking-[-0.05px]">
+                                LocaNFTs are digital representations of specific places securely stored on the Blockchain. These tokens create an immutable record of location ownership within the innovative LocaMos ecosystem.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<footer id="footer"></footer>
+<script>
+    $(document).ready(function () {
+        $('.text-question').on('click', function () {
+            $(this).children('.text-answer').toggleClass('add_answer');
+            $(this).children('.content_questions').toggleClass('isdash');
+            e.stopPropagation();
+        });
+    });
+</script>
+</body>
+</html>

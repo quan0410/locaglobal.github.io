@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/tailwind/output.css">
+    <title>LoCaMos Global</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../node_modules/preline/dist/preline.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let injectHtml = (nameFile, nameEle) => {
+                $.ajax({
+                    url: './' + nameFile,
+                    type: "GET",
+                    dataType: "html",
+                    success: (res) => {
+                        console.log(res)
+                        $(nameEle).html(res)
+                    }
+                })
+            }
+            injectHtml('index.html', '#wrapper-content')
+            injectHtml('component/header.html', '#header')
+            injectHtml('component/footer.html', '#footer')
+
+        })
+    </script>
+</head>
+<body>
+<header id="header"></header>
+
+<div id="wrapper-content" class="overflow-hidden mb-[180px] home-page pt-24 lg:pt-20"></div>
+
+<footer id="footer"></footer>
+</body>
+</html>

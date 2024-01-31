@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/tailwind/output.css" />
+    <title>LoCaMos Global</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../node_modules/preline/dist/preline.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let injectHtml = (nameFile, nameEle) => {
+                $.ajax({
+                    url: "./" + nameFile,
+                    type: "GET",
+                    dataType: "html",
+                    success: (res) => {
+                        console.log(res);
+                        $(nameEle).html(res);
+                    },
+                });
+            };
+
+            injectHtml("component/header.html", "#header");
+            injectHtml("component/footer.html", "#footer");
+        });
+    </script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div id="wrapper-content" class="overflow-hidden use-case lg:pt-20 pb-36">
+        <section class="section-hero relative flex justify-center items-center">
+            <div class="bg-image">
+                <img src="../public/image/use-case/hero.png" alt="" />
+            </div>
+            <div class="max-w-[1000px] text-center p-4">
+                <p class="title-xl pb-5">use case</p>
+                <span class="content">
+                    Lorem ipsum dolor sit amet consectetur. Morbi vel amet eget quam pellentesque eget elementum.
+                </span>
+                <div
+                    class="mx-auto mt-9 button-bg text-center text-white text-lg font-bold max-w-[200px] sm:max-w-[305px]">
+                    contact Us
+                </div>
+            </div>
+        </section>
+        <section class="flex flex-col gap-20 section-service pt-20 md:pt-36 px-4 md:px-20">
+            <div class="flex flex-col gap-4 text-center items-center">
+                <p class="title">Use Cases</p>
+                <span class="max-w-[720px] content">Lorem ipsum dolor sit amet consectetur. Suspendisse posuere diam
+                    nisi quis. Massa ut id lacus habitant.</span>
+            </div>
+            <div class="cards flex flex-col gap-8 md:gap-10">
+                <div class="bg-gradient w-full overflow-hidden">
+                    <div class="flex flex-col md:flex-row justify-between rounded-3xl min-h-[800px]"
+                        style="background: linear-gradient(111deg, #396BB3, #041F85);">
+                        <div class="flex flex-col gap-5 w-full md:w-[60%] xl:w-[45%] p-8">
+                            <p class="text-white text-2xl sm:text-[32px] font-bold leading-[130%]">Discover the Future
+                                of Coffee Enjoyment at LocaCafe!</p>
+                            <span class="text-white text-lg leading-[150%] tracking-wide max-w-[480px]">Welcome to
+                                LocaCafe, where Coffee Meets Tech for an unmatched experience. Step into LocaCafe, where
+                                coffee and technology join forces for a one-of-a-kind adventure. Dive into the world of
+                                LocaMos tech, transforming your coffee outings. Discover the features that make LocaCafe
+                                the go-to spot for community connections and pure fun.</span>
+                        </div>
+                        <div class="relative w-full min-h-[400px] md:w-[45%] overflow-hidden">
+                            <div class="bg-image z-0">
+                                <img src="../public/image/use-case/LocaCafe.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-8 md:gap-10 flex-col lg:flex-row">
+                    <div class="bg-gradient w-full">
+                        <div class="flex flex-col gap-[18px] rounded-3xl py-10 px-8 h-full  text-white"
+                            style="background: linear-gradient(180deg, #396BB3, #041F85);">
+                            <p class="text-2xl xl:text-[32px] font-bold leading-[130%]">LocaMeet and LocaCall: Elevate
+                                Connections, Multiply Rewards</p>
+                            <div class="flex gap-[18px] items-center">
+                                <div class="relative w-20 h-20 justify-center items-center inline-flex">
+                                    <div class="absolute w-16 h-16 opacity-45 bg-white rounded-full blur-[20.89px]">
+                                    </div>
+                                    <img class="max-w-max p-2 md:p-4" src="../public/image/use-case/add-user.svg">
+                                </div>
+                                <span
+                                    class="text-base md:text-lg leading-normal tracking-[0.48px] md:tracking-[0.54px]">Engage
+                                    in activities such as making new friends, initiating and receiving calls at
+                                    LocaCafe, and watch as you earn triple LocaBonus points.</span>
+                            </div>
+                            <div class="flex gap-[18px] items-center">
+                                <div class="w-20 h-20 justify-center items-center inline-flex">
+                                    <div class="absolute w-16 h-16 opacity-45 bg-white rounded-full blur-[20.89px]">
+                                    </div>
+                                    <img class="max-w-max p-2 md:p-4" src="../public/image/use-case/localCafe.svg">
+                                </div>
+                                <span
+                                    class="text-base md:text-lg leading-normal tracking-[0.48px] md:tracking-[0.54px]">LocaCafe
+                                    has become the heart of community connections, seamlessly bridging the gap
+                                    between online and offline interactions, and inspiring everyone to unite.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient w-full">
+                        <div class="flex flex-col gap-[18px] rounded-3xl py-10 px-8 h-full  text-white"
+                            style="background: linear-gradient(180deg, #396BB3, #041F85);">
+                            <p class="text-2xl xl:text-[32px] font-bold leading-[130%]">LocaBiz: Save Smart, Enjoy More
+                            </p>
+                            <div class="flex gap-[18px] items-center">
+                                <div class="w-20 h-20 justify-center items-center inline-flex">
+                                    <div class="absolute w-16 h-16 opacity-45 bg-white rounded-full blur-[20.89px]">
+                                    </div>
+                                    <img class="max-w-max p-2 md:p-4" src="../public/image/use-case/users.svg">
+                                </div>
+                                <span
+                                    class="text-base md:text-lg leading-normal tracking-[0.48px] md:tracking-[0.54px]">Engage
+                                    in activities such as making new friends, initiating and receiving calls at
+                                    LocaCafe, and watch as you earn triple LocaBonus points.</span>
+                            </div>
+                            <div class="flex gap-[18px] items-center">
+                                <div class="w-20 h-20 justify-center items-center inline-flex">
+                                    <div class="absolute w-16 h-16 opacity-45 bg-white rounded-full blur-[20.89px]">
+                                    </div>
+                                    <img class="max-w-max p-2 md:p-4" src="../public/image/use-case/gift.svg">
+                                </div>
+                                <span
+                                    class="text-base md:text-lg leading-normal tracking-[0.48px] md:tracking-[0.54px]">Enhance
+                                    your return visits with the allure of reclaiming a portion of your expenses.
+                                    LocaCafe not only tantalizes your taste buds but also lets you save smart!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient">
+                    <div class="flex flex-col gap-[18px] rounded-3xl py-10 px-8 h-full text-white"
+                        style="background: linear-gradient(180deg, #396BB3, #041F85);">
+                        <p class="text-2xl xl:text-[32px] font-bold leading-[130%]">LocaMos: Merge Real and Virtual
+                            Realms</p>
+                        <div class="flex gap-[18px] items-center">
+                            <div class="w-20 h-20 justify-center items-center inline-flex">
+                                <div class="absolute w-16 h-16 opacity-45 bg-white rounded-full blur-[20.89px]"></div>
+                                <img class="max-w-max p-2 md:p-4" src="../public/image/use-case/map.svg">
+                            </div>
+                            <span
+                                class="text-base md:text-lg leading-normal tracking-[0.48px] md:tracking-[0.54px]">LocaMos
+                                seamlessly merges the real and virtual worlds, providing a unique experience for
+                                customers using VR/AR devices at LocaCafe.</span>
+                        </div>
+                        <div class="flex gap-[18px] items-center">
+                            <div class="w-20 h-20 justify-center items-center inline-flex">
+                                <div class="absolute w-16 h-16 opacity-45 bg-white rounded-full blur-[20.89px]"></div>
+                                <img class="max-w-max p-2 md:p-4" src="../public/image/use-case/screen.svg">
+                            </div>
+                            <span
+                                class="text-base md:text-lg leading-normal tracking-[0.48px] md:tracking-[0.54px]">Immerse
+                                yourself in an interactive space, encouraging customers to explore the perfect blend of
+                                reality and virtuality, making every visit an extraordinary adventure.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-cta my-20 md:my-36 py-20 xl:py-36 px-4 md:px-10 lg:px-20 relative">
+            <div class="bg-image lg:max-w-[1440px] mx-0 lg:mx-20">                
+                <img class="lg:rounded-2xl" src="../public/image/use-case/CTA.png" alt="" />
+            </div>
+            <div class="relative flex flex-col gap-4 text-white pl-4 md:pl-10 xl:pl-20 max-w-[1440px] mx-auto">
+                <div class="title">Visit LocaCafe Today!</div>
+                <div class="content max-w-[560px]">Experience the evolution of coffee culture, where LocaCafe is more than just a
+                    place to sip coffee; it's a destination for extraordinary connections and innovations. Join us
+                    and unlock a realm of unparalleled experiences. Your coffee adventure begins at LocaCafe!</div>
+            </div>
+        </section>
+        <section class="w-full mt-20 md:mt-[140px] overflow-hidden flex flex-col gap-16 px-4 lg:px-20 py-20 relative">
+            <div class="absolute -left-1/4 xl:left-0 top-0 -z-[1]">
+                <img class="bg-center" src="../public/image/home/aboutSection/Ellipse%201.svg" alt="">
+            </div>
+            <div class="flex flex-col gap-6 items-start md:items-center">
+                <p class="title-xl">Our Lastest News</p>
+                <div class="mt-4 button-bg text-center text-white text-lg font-bold max-w-[305px] w-full">View all posts</div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-6 xl:gap-8">
+                <div class="bg-gradient p-[2px] rounded-b-2xl overflow-hidden rounded-2xl">
+                    <div class="flex flex-col rounded-b-2xl overflow-hidden max-w-[405px] bg-[#00147F]">
+                        <div>
+                            <img src="../public/image/home/postsSection/Rectangle-23815.png" alt="">
+                        </div>
+                        <div class="p-5 xl:p-4 rounded-b-2xl bg-post">
+                            <div class="flex xl:flex-row flex-col gap-1 xl:gap-0 justify-between mb-3 text-[#00BFFF]">
+                                <div class="flex gap-1">
+                                    <img src="../public/image/home/postsSection/icons.svg" alt="">
+                                    <span>November 24, 2023</span>
+                                </div>
+                                <div class="flex gap-1">
+                                    <img src="../public/image/home/postsSection/tag.svg" alt="">
+                                    <span>Business</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col xl:gap-[18px] gap-0">
+                                <a href="#" class="title-lg">Keep Your Business Safe Ensure High Availability.
+                                </a>
+                                <div class="content-lg">
+                                    Lorem ipsum dolor sit amet consectetur. Enim volutpat quis egestas amet. Non vestibulum massa
+                                    blandit diam non at ac.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient p-[2px] rounded-b-2xl overflow-hidden rounded-2xl">
+                    <div class="flex flex-col rounded-b-2xl overflow-hidden max-w-[405px] bg-[#00147F]">
+                        <div>
+                            <img src="../public/image/home/postsSection/Rectangle2.png" alt="">
+                        </div>
+                        <div class="p-5 xl:p-4 rounded-b-2xl"
+                        style="background: #ffffff1f;">
+                            <div class="flex xl:flex-row flex-col gap-1 xl:gap-0 justify-between mb-3 text-[#00BFFF]">
+                                <div class="flex gap-1">
+                                    <img src="../public/image/home/postsSection/icons.svg" alt="">
+                                    <span>November 24, 2023</span>
+                                </div>
+                                <div class="flex gap-1">
+                                    <img src="../public/image/home/postsSection/tag.svg" alt="">
+                                    <span>Business</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col xl:gap-[18px] gap-0">
+                                <a href="#" class="title-lg">Keep Your Business Safe Ensure High Availability.
+                                </a>
+                                <div class="content-lg">
+                                    Lorem ipsum dolor sit amet consectetur. Enim volutpat quis egestas amet. Non vestibulum massa
+                                    blandit diam non at ac.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient p-[2px] rounded-b-2xl overflow-hidden rounded-2xl">
+                    <div class="flex flex-col rounded-b-2xl overflow-hidden max-w-[405px] bg-[#00147F]">
+                        <div>
+                            <img src="../public/image/home/postsSection/Rectangle3.png" alt="">
+                        </div>
+                        <div class="p-5 xl:p-4 rounded-b-2xl"
+                        style="background: #ffffff1f;">
+                            <div class="flex xl:flex-row flex-col gap-1 xl:gap-0 justify-between mb-3 text-[#00BFFF]">
+                                <div class="flex gap-1">
+                                    <img src="../public/image/home/postsSection/icons.svg" alt="">
+                                    <span>November 24, 2023</span>
+                                </div>
+                                <div class="flex gap-1">
+                                    <img src="../public/image/home/postsSection/tag.svg" alt="">
+                                    <span>Business</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col xl:gap-[18px] gap-0">
+                                <a href="#" class="title-lg">Keep Your Business Safe Ensure High Availability.
+                                </a>
+                                <div class="content-lg">
+                                    Lorem ipsum dolor sit amet consectetur. Enim volutpat quis egestas amet. Non vestibulum massa
+                                    blandit diam non at ac.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>

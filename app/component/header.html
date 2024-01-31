@@ -1,0 +1,52 @@
+<div class="max-w-[1440px] flex items-center justify-between lg:px-20 lg:py-4 p-4 m-auto flex-col lg:flex-row">
+    <div class="flex items-center justify-between w-full lg:w-fit">
+        <div class="flex items-center justify-center font-spartan text-white font-bold text-2xl gap-2">
+            <img height="48" width="48" src="../../public/image/Logo.svg" alt="Logo">
+            <span>LocaMos</span>
+        </div>
+        <div class="lg:hidden">
+            <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center"
+                data-hs-collapse="#navbar" aria-controls="navbar" aria-label="Toggle navigation">
+                <img src="../../public/image/handler-bar.svg" alt="">
+            </button>
+        </div>
+    </div>
+    <div id="navbar"
+        class="lg:items-center gap-[24px] hidden items-start lg:w-auto w-full lg:gap-16 hs-collapse transition-all flex-col lg:flex-row lg:flex overflow-hidden lg:overflow-visible">
+        <ul class="text-white flex gap-[24px] text-lg lg:flex-row flex-col">
+            <li class="cursor-pointer capitalize"><a href="layout.html">Home</a></li>
+            <li class="cursor-pointer capitalize">About Us</li>
+            <li class="cursor-pointer capitalize">
+                <div class="relative inline-flex" id="navbar-dropdown">
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                        class="inline-flex items-center justify-center gap-1">
+                        Service
+                        <svg class="hs-dropdown-open:rotate-180 w-4 h-4 mt-1.5" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div id="dropdownNavbar"
+                        class="hidden lg:min-w-[15rem] shadow-md rounded-lg px-5 lg:p-2 mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full">
+                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:bg-[#00147F]" href="#">
+                            For Users
+                        </a>
+                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:bg-[#00147F]" href="#">
+                            For Bussinesses
+                        </a>
+                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg hover:bg-[#00147F]" href="#">
+                            For Partners
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cursor-pointer capitalize"><a href="use-case.html">Use Cases</a></li>
+            <li class="cursor-pointer capitalize">Resources</li>
+        </ul>
+        <a class="text-base font-medium text-center tracking-tight text-white border border-white rounded px-4 py-[10px]"
+            href="contact.html">
+            <span>Contact Us</span>
+        </a>
+    </div>
+</div>
